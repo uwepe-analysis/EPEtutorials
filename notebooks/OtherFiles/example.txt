@@ -1,0 +1,3 @@
+      There are five spaces in front of me.
+    This line is indented.
+I have 4 trailing spaces...    
