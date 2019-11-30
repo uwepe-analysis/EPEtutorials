@@ -1,24 +1,4 @@
-# Elementary Particle Expirement Tutorials
-markup cheatsheet: https://en.wikipedia.org/wiki/Markdown  
-jupyter shortcuts: https://stackoverflow.com/a/38195812  
-
-packages  
-bash  
-git  
-variables  
-string-files  
-containers  
-logic and loops  
-functions  
-monte carlo  
-classes and objects  
-documentation (fluff)  
-debugging/testing (fluff/excercises) (creating custom exceptions)  
-jets  
-jets model 2d  
-jets model 3d  
-machine learning (expand)  
-deep learning (expand)  
+# Elementary Particle Expirement Tutorials  
 
 ## Git Installation
 
