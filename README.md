@@ -113,3 +113,6 @@ If you already have pip and Python 3 installed, you can run ```pip3 install anac
 
 ## After installation
 Once you have successfully installed git, python and jupyterlab, create a github account and sign in. You can download the repository by clicking on the green "Clone or Download" button and copy the link next to "Clone with HTTPS". Open up git bash, and type ```git clone [The web address here]```. This will download the repository to your local machine at your home directory. Then, open jupyter notebook either by the Anaconda Navigator or by going to git bash and typing ```jupyter notebook``` (or ```jupyterlab```), then your browser will be open.
+
+
+Note: as for the notebooks, you are encouraged to do Chapter 12 and the Chapter 13 is optional.
