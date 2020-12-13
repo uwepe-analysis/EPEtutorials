@@ -26,7 +26,7 @@ First, we install python3 and then use `pip3`, a package manager for Python, to 
 
 #### Windows
 
-1. Download Python 3.6 from https://www.python.org/downloads/release/python-391/ and install it. *Be sure to check the box that says to add Python 3.6 to your path.* 
+1. Download Python 3.9 from https://www.python.org/downloads/release/python-391/ and install it. *Be sure to check the box that says to add Python 3.9 to your path.* 
 
 2. Run `PowerShell` from the Start menu. Search for it, and just press `Enter` to run it.
 
@@ -90,7 +90,6 @@ On Windows, make sure you configure the terminal emulator to use Windows' defaul
 brew install git
 ```
 
-On Mac, if you get a warning saying the .pkg file can’t be opened because it is from an unidentified developer, go to your System Preferences -> Security and Privacy and click on "open anyway." Follow the rest of the installer instructions to finish installing git.
 #### Linux distribution 
 
 ##### Debian/Ubuntu/Linux Mint
