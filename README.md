@@ -75,7 +75,7 @@ sudo apt install python python3-pip python-dev
 With Python installed, wu run `pip3` to install other packages. 
 
 ``` 
-pip3 install jupyterlab scipy numpy scipy matplotlib ipython jupyter pandas
+pip3 install jupyterlab scipy numpy matplotlib 
 ```
 
 ### Git Installation
