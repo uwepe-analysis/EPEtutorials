@@ -15,6 +15,7 @@
   * [Advanced](#advanced)
     + [Anaconda Installation](#anaconda-installation)
 - [After installation](#after-installation)
+- [Advice](#Advice)
 
 ## Environment Configuration
 
@@ -74,7 +75,7 @@ sudo apt install python python3-pip python-dev
 With Python installed, wu run `pip3` to install other packages. 
 
 ``` 
-pip3 install jupyterlab scipy 
+pip3 install jupyterlab scipy numpy matplotlib 
 ```
 
 ### Git Installation
@@ -115,3 +116,9 @@ Once you have successfully installed git, python and jupyterlab, create a github
 
 
 Note: as for the notebooks, you are encouraged to do Chapter 12 and the Chapter 13 is optional.
+
+## Advice 
+
+1. Type every line of the codes in your jupyter notebook and run it(Shift + Enter), do not just copy and paste
+
+2. Do exercise 
