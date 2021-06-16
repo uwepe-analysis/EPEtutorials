@@ -1,23 +1,24 @@
 # Elementary Particle Expirement Tutorials  
 ## Table of Content
 
-- [Environment Configuration](#environment-configuration)
-  * [Recommended:Docker](#Recommended:Docker)
-  * [Python](#python)
-    + [Windows](#windows)
-    + [MacOS](#macos)
-    + [Linux distribution](#linux-distribution)
-      - [Debian/Ubuntu/Linux Mint](#debian-ubuntu-linux-mint)
-  * [Git Installation](#git-installation)
-    + [Windows](#windows-1)
-    + [MacOS](#macos-1)
-    + [Linux distribution](#linux-distribution-1)
-      - [Debian/Ubuntu/Linux Mint](#debian-ubuntu-linux-mint-1)
-  * [Advanced](#advanced)
-    + [Anaconda Installation](#anaconda-installation)
-- [After installation](#after-installation)
-- [Advice](#Advice)
-
+- [Elementary Particle Expirement Tutorials](#elementary-particle-expirement-tutorials)
+  - [Table of Content](#table-of-content)
+  - [Environment Configuration](#environment-configuration)
+    - [Recommended:Docker](#recommendeddocker)
+    - [Python](#python)
+      - [Windows](#windows)
+      - [MacOS](#macos)
+      - [Linux distribution](#linux-distribution)
+        - [Debian/Ubuntu/Linux Mint](#debianubuntulinux-mint)
+    - [Git Installation](#git-installation)
+      - [Windows](#windows-1)
+      - [MacOS](#macos-1)
+      - [Linux distribution](#linux-distribution-1)
+        - [Debian/Ubuntu/Linux Mint](#debianubuntulinux-mint-1)
+    - [Advanced](#advanced)
+      - [Anaconda Installation](#anaconda-installation)
+  - [After installation](#after-installation)
+  - [Advice](#advice)
 ## Environment Configuration
 
 ### Recommended:Docker 
