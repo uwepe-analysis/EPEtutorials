@@ -1,24 +1,119 @@
 # Elementary Particle Expirement Tutorials  
 ## Table of Content
 
-- [Environment Configuration](#environment-configuration)
-  * [Python](#python)
-    + [Windows](#windows)
-    + [MacOS](#macos)
-    + [Linux distribution](#linux-distribution)
-      - [Debian/Ubuntu/Linux Mint](#debian-ubuntu-linux-mint)
-  * [Git Installation](#git-installation)
-    + [Windows](#windows-1)
-    + [MacOS](#macos-1)
-    + [Linux distribution](#linux-distribution-1)
-      - [Debian/Ubuntu/Linux Mint](#debian-ubuntu-linux-mint-1)
-  * [Advanced](#advanced)
-    + [Anaconda Installation](#anaconda-installation)
-- [After installation](#after-installation)
-- [Advice](#Advice)
-
+- [Elementary Particle Expirement Tutorials](#elementary-particle-expirement-tutorials)
+  - [Table of Content](#table-of-content)
+  - [Environment Configuration](#environment-configuration)
+    - [Recommended:Docker](#recommendeddocker)
+    - [Python](#python)
+      - [Windows](#windows)
+      - [MacOS](#macos)
+      - [Linux distribution](#linux-distribution)
+        - [Debian/Ubuntu/Linux Mint](#debianubuntulinux-mint)
+    - [Git Installation](#git-installation)
+      - [Windows](#windows-1)
+      - [MacOS](#macos-1)
+      - [Linux distribution](#linux-distribution-1)
+        - [Debian/Ubuntu/Linux Mint](#debianubuntulinux-mint-1)
+    - [Advanced](#advanced)
+      - [Anaconda Installation](#anaconda-installation)
+  - [After installation](#after-installation)
+  - [Advice](#advice)
 ## Environment Configuration
 
+### Recommended:Docker 
+
+We recommend to use Docker to create a virtual system to study this tutorial. 
+
+If you are using Windows, you can follow the official installation guide [Install Docker Desktop on Windows](https://docs.docker.com/docker-for-windows/install/)
+
+If you are using MacOS, you can follow the official installation guide [Install Docker Desktop on Mac](https://docs.docker.com/docker-for-mac/install/)
+
+To confirm if you successly install Docker, run `docker run hello-world`
+
+what you see: 
+![docker-hello-world](./img/docker-hello-world.png)
+
+You may also want to check this page to get started with docker.  ![Docker-get-started](https://docs.docker.com/get-started/)
+
+Then let's create an Ubuntu container named `EPETutorial` for this tutorial. 
+
+``` bash 
+# run the line below if you are using Linux/MacOS  
+# whoami will tell your username 
+docker run -p 8899:8888 --name EPETutorial -v /home/$(whoami)/EPETutorial:/root -it ubuntu /bin/bash
+``` 
+
+or if you are running windows, please substitue the `<USERNAME>` below with your username on your machine.   
+
+```  
+docker run -p 8899:8888 --name EPETutorial -v C:\Users\<USERNAME>\EPETutorial:/root -it ubuntu /bin/bash
+``` 
+
+>What we did by this command: 
+> 1. mount a folder under your home directory called `EPETutorial` to your docker container path `/root/`. This is done by `-v /home/$(whoami)/EPETutorial:/root`
+> 2. specify the name `EPETutorial` to the container. done by `--name EPETutorial`
+> 3. publish a container's port(s) 8888 to the host port 8899. done by `-p 8899:8888` 
+> Check more info by `docker run --help`
+
+You'll see your shell prompt change to something like `root@15105b7f505b:~#`, and this means you are in the Ubuntu container. 
+
+Then we will install the requird packages 
+```bash 
+apt update && apt upgrade -y  # update the package list 
+apt install git python3 python3-pip python3-dev tree -y # install git and python 
+```
+
+```bash 
+pip3 install jupyter scipy numpy matplotlib # install the python related modules 
+```
+
+Then clone this repo via commands: 
+```bash 
+cd ~  # this will navigate to the home directory, this is /root 
+git clone https://github.com/uwepe-analysis/EPEtutorials 
+```
+
+To confirm you successfully clone this repository, try 
+```
+tree -L 2 EPEtutorials
+```
+
+And what you should see: 
+![contents](./img/contents.png)
+
+
+Now we are ready for the first chapter exercise for shell. 
+For the other chapters,  
+
+In the Ubunutu container, run 
+```
+jupyter notebook --ip 0.0.0.0 --port 8888 --no-browser --allow-root
+```
+You'll see a message like this
+```bash 
+
+Copy/paste this URL into your browser when you connect for the first time,
+to login with a token:
+    http://127.0.0.1:8888/?token=d6e80acaf08e09853dc72f6b0f022b8225f94f
+
+```
+
+Then open your browser and navigate to this link: 
+```
+localhost:8899
+```
+if it is the first time you connect to the jupyter-notebook, you are asked to input a token. Just copy and paste the token on your machine, and log in. 
+
+Finally, if your browser shows this, the env is ready to go. 
+
+![jupyter](./img/jupyter.png) 
+
+To leave the Unbuntu container enviorment, type `exit` or use key shortcut `<Control>+C`, this will quit the container and stop all the activities. To detach the work, use the shortcut `<Control>+C, <Control>+Q `. 
+
+To attach the session, make sure the container is not stopped (you can `docker start <Container-Name>`), then `docker attach EPEtutorial`. 
+You can use `docker ps -a` to check the status of all containers. 
+ 
 ### Python
 Depends on which operating system(OS) you are using, different ways are recommended here to install Python. 
 
@@ -96,7 +191,7 @@ brew install git
 ##### Debian/Ubuntu/Linux Mint
 
 ``` bash
-sudo apt install git
+sudo apt install git -y
 ```
 
 ### Advanced 
