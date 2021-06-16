@@ -25,9 +25,9 @@
 
 We recommend to use Docker to create a virtual system to study this tutorial. 
 
-If you are using Windows, you can follow the official installation guide ![Install Docker Desktop on Windows](https://docs.docker.com/docker-for-windows/install/)
+If you are using Windows, you can follow the official installation guide [Install Docker Desktop on Windows](https://docs.docker.com/docker-for-windows/install/)
 
-If you are using MacOS, you can follow the official installation guide ![Install Docker Desktop on Mac](https://docs.docker.com/docker-for-mac/install/)
+If you are using MacOS, you can follow the official installation guide [Install Docker Desktop on Mac](https://docs.docker.com/docker-for-mac/install/)
 
 To confirm if you successly install Docker, run `docker run hello-world`
 
@@ -60,12 +60,12 @@ You'll see your shell prompt change to something like `root@15105b7f505b:~#`, an
 
 Then we will install the requird packages 
 ```bash 
-apt update & apt upgrade -y 
-apt install git python3 python3-pip python3-dev tree -y
+apt update && apt upgrade -y  # update the package list 
+apt install git python3 python3-pip python3-dev tree -y # install git and python 
 ```
 
 ```bash 
-pip3 install jupyter scipy numpy matplotlib #
+pip3 install jupyter scipy numpy matplotlib # install the python related modules 
 ```
 
 Then clone this repo via commands: 
