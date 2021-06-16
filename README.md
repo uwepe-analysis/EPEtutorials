@@ -2,7 +2,7 @@
 ## Table of Content
 
 - [Environment Configuration](#environment-configuration)
-* [Recommended: Docker ](#Recommended: Docker )
+  * [Recommended:Docker](#Recommended:Docker)
   * [Python](#python)
     + [Windows](#windows)
     + [MacOS](#macos)
@@ -20,7 +20,7 @@
 
 ## Environment Configuration
 
-### Recommended: Docker 
+### Recommended:Docker 
 
 We recommend to use Docker to create a virtual system to study this tutorial. 
 
@@ -48,6 +48,12 @@ or if you are running windows, please substitue the `<USERNAME>` below with your
 ```  
 docker run -p 8899:8888 --name EPETutorial -v C:\Users\<USERNAME>\EPETutorial:/root -it ubuntu /bin/bash
 ``` 
+
+>What we did by this command: 
+> 1. mount a folder under your home directory called `EPETutorial` to your docker container path `/root/`. This is done by `-v /home/$(whoami)/EPETutorial:/root`
+> 2. specify the name `EPETutorial` to the container. done by `--name EPETutorial`
+> 3. publish a container's port(s) 8888 to the host port 8899. done by `-p 8899:8888` 
+> Check more info by `docker run --help`
 
 You'll see your shell prompt change to something like `root@15105b7f505b:~#`, and this means you are in the Ubuntu container. 
 
@@ -101,6 +107,11 @@ if it is the first time you connect to the jupyter-notebook, you are asked to in
 Finally, if your browser shows this, the env is ready to go. 
 
 ![jupyter](./img/jupyter.png) 
+
+To leave the Unbuntu container enviorment, type `exit` or use key shortcut `<Control>+C`, this will quit the container and stop all the activities. To detach the work, use the shortcut `<Control>+C, <Control>+Q `. 
+
+To attach the session, make sure the container is not stopped (you can `docker start <Container-Name>`), then `docker attach EPEtutorial`. 
+You can use `docker ps -a` to check the status of all containers. 
  
 ### Python
 Depends on which operating system(OS) you are using, different ways are recommended here to install Python. 
