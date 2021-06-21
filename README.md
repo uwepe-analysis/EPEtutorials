@@ -109,7 +109,7 @@ Finally, if your browser shows this, the env is ready to go.
 
 ![jupyter](./img/jupyter.png) 
 
-To leave the Unbuntu container enviorment, type `exit` or use key shortcut `<Control>+C`, this will quit the container and stop all the activities. To detach the work, use the shortcut `<Control>+C, <Control>+Q `. 
+To leave the Unbuntu container enviorment, type `exit` or use key shortcut `<Control>+C`, this will quit the container and stop all the activities. To detach the work, use the shortcut `<Control>+P, <Control>+Q `. 
 
 To attach the session, make sure the container is not stopped (you can `docker start <Container-Name>`), then `docker attach EPEtutorial`. 
 You can use `docker ps -a` to check the status of all containers. 
